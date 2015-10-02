@@ -19,15 +19,16 @@ class Numyglot
     /**
      * Numyglot constructor.
      *
-     * @param CsvFileReader       $csvReader
-     * @param RomanNumeralsParser $romanNumeralsParser
-     * @param ItalianSpeller      $italianSpeller
+     * @param FileReader  $reader
+     * @param Parser  $parser
+     * @param Speller $speller
+     *
      */
-    public function __construct($csvReader, $romanNumeralsParser, $italianSpeller)
+    public function __construct(FileReader $reader, Parser $parser, Speller $speller)
     {
-        $this->reader  = $csvReader;
-        $this->parser  = $romanNumeralsParser;
-        $this->speller = $italianSpeller;
+        $this->reader  = $reader;
+        $this->parser  = $parser;
+        $this->speller = $speller;
     }
 
     /**
@@ -35,7 +36,7 @@ class Numyglot
      *
      * @return Numyglot
      */
-    public function readCsv($filePath)
+    public function read($filePath)
     {
         $content          = $this->reader->readAndReturnAsArray($filePath);
         $read = [];

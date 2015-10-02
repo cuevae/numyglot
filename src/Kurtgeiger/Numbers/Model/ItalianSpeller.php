@@ -4,7 +4,7 @@
 namespace Kurtgeiger\Numbers\Model;
 
 
-class ItalianSpeller
+class ItalianSpeller implements Speller
 {
 
     /**

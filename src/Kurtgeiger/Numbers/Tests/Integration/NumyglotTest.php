@@ -23,11 +23,10 @@ class NumyglotTest extends \PHPUnit_Framework_TestCase
         $csvReader = new CsvFileReader();
         $romanNumeralsParser = new RomanNumeralsParser();
         $italianSpeller = new ItalianSpeller();
-
         $numyglot = new Numyglot($csvReader, $romanNumeralsParser, $italianSpeller);
 
         $result = $numyglot
-            ->readCsv(PROJECT_ROOT . '/data/csv-input-roman.txt')
+            ->read(PROJECT_ROOT . '/data/csv-input-roman.txt')
             ->spellToItalian()
             ->toArray();
 

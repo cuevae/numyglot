@@ -4,7 +4,7 @@
 namespace Kurtgeiger\Numbers\Model;
 
 
-class CsvFileReader
+class CsvFileReader implements FileReader
 {
 
     /**

@@ -4,7 +4,7 @@
 namespace Kurtgeiger\Numbers\Model;
 
 
-class RomanNumeralsParser
+class RomanNumeralsParser implements Parser
 {
 
     protected $mapping = [
